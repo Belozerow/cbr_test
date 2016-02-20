@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.belozerov.cbrrate.viewmodel.CalendarFragmentViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:title="@string/app_name"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:padding="8dp"
+                android:text="@{viewModel.currentMonth}"
+                android:textColor="@color/mainTextColor"
+                android:textSize="18sp"
+                tools:text="december 2015" />
+
+            <com.p_v.flexiblecalendar.FlexibleCalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/getRate"
+            android:layout_width="@dimen/circleButtonSize"
+            android:layout_height="@dimen/circleButtonSize"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/circle_button"
+            android:gravity="center"
+            android:text="@string/rate"
+            android:textColor="@color/buttonTextColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </FrameLayout>
+</layout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CBRRate</string>
+    <string name="pleaseWait">Please, wait…</string>
+    <string name="rate">Rate</string>
+    <string name="dollarRate">1$ = %1$s Rub</string>
+    <string name="euroRate">1€ = %1$s Rub</string>
+    <string name="noValutes">There is no data for selected date</string>
+</resources>
